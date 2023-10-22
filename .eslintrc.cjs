@@ -9,9 +9,22 @@ module.exports = {
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
-  settings: { react: { version: '18.2' } },
+  settings: {
+    "eslint.workingDirectories": [
+      "Dir1",
+      "Dir2"
+    ],
+    "eslint.validate": [
+      "javascript",
+      "javascriptreact",
+      "typescript",
+      "typescriptreact",
+    ]
+  },
   plugins: ['react-refresh'],
   rules: {
+    "react/prop-types": "off",
+    "no-unused-vars": "off",
     'react-refresh/only-export-components': [
       'warn',
       { allowConstantExport: true },
